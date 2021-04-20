@@ -1,0 +1,112 @@
+node-wechat
+├─.DS_Store
+├─.eslintignore
+├─.eslintrc.js
+├─.gitignore
+├─README.md
+├─package.json
+├─result.txt
+├─src
+|  ├─main.js
+|  ├─utils
+|  |   ├─http.js
+|  |   ├─log.js
+|  |   └myIp.js
+|  ├─jssdk
+|  ├─config
+|  |   └index.js
+├─rollup
+|   ├─config.dev.js
+|   └config.prod.js
+├─public
+|   └index.html
+├─example
+|    ├─config.js
+|    └index.js
+├─build
+|   └bundle.js
+├─.git
+|  ├─COMMIT_EDITMSG
+|  ├─HEAD
+|  ├─config
+|  ├─description
+|  ├─index
+|  ├─refs
+|  |  ├─tags
+|  |  ├─remotes
+|  |  |    ├─origin
+|  |  |    |   └master
+|  |  ├─heads
+|  |  |   └master
+|  ├─objects
+|  |    ├─pack
+|  |    ├─info
+|  |    ├─fb
+|  |    | └270bdc7aad0aaf3b0f2f0e345fdadef0a34efc
+|  |    ├─f7
+|  |    | ├─12a7161336e34de284c4edb558f9b2e1832dc9
+|  |    | └240993cfdd5a482ed86ab43eb755eecded2673
+|  |    ├─f2
+|  |    | └f29dbede57f017adb565c124abd9b206cd70dd
+|  |    ├─e6
+|  |    | └9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+|  |    ├─e5
+|  |    | └f853563ff1270eb633a0769a7151e8487c20a5
+|  |    ├─d8
+|  |    | └f397711cf8089c32d628b97b39abc0b7d977a6
+|  |    ├─bf
+|  |    | └55a19a80dad1918130bc543d6152db3cb4ed55
+|  |    ├─ac
+|  |    | └15cffd443389034e3b2e72ffd133d47ae1aab8
+|  |    ├─a4
+|  |    | └1690c74f7f058e4f07a43caebfb3926c95ba17
+|  |    ├─98
+|  |    | └6c92dc3b1fb1015828999a1e0763338da48ab5
+|  |    ├─8e
+|  |    | ├─6f813739ac78d464150e4270bdba294b419bc2
+|  |    | └d6c385cd1625ce8aa69fac9d5a5ffc5f0fcc44
+|  |    ├─76
+|  |    | └efb07fd63775354cd2cd8c3ee7103733a71403
+|  |    ├─6c
+|  |    | └d31269ac8e7f2b808e294ea7567d0e4a3b06ef
+|  |    ├─67
+|  |    | └e2de60e4ff50d90694f1a472f1d888e5f3ce2f
+|  |    ├─54
+|  |    | └867a5ad2f10613bb550fc7439d4f0bd9115e02
+|  |    ├─53
+|  |    | └0ca5f2c6de15e3dd3337324f36a402daf9c86a
+|  |    ├─4d
+|  |    | └b136f081b56efe87f3a1dbd4fca3d466e20c2d
+|  |    ├─48
+|  |    | └cf4246065e20da0e63d5f2b56dc9cbc0869d4e
+|  |    ├─31
+|  |    | └c125c9a36d8ecf9491bb4976be5da04a510e3e
+|  |    ├─2c
+|  |    | └8c59b798894db4a579d63c713350d78c9fd47e
+|  |    ├─12
+|  |    | └286f9e8bbf50480f4d56bb7cd83caa98ee1932
+|  |    ├─0f
+|  |    | └e7ea0bc1303a1086c50e0c97c4a297190be2d7
+|  ├─logs
+|  |  ├─HEAD
+|  |  ├─refs
+|  |  |  ├─remotes
+|  |  |  |    ├─origin
+|  |  |  |    |   └master
+|  |  |  ├─heads
+|  |  |  |   └master
+|  ├─info
+|  |  └exclude
+|  ├─hooks
+|  |   ├─applypatch-msg.sample
+|  |   ├─commit-msg.sample
+|  |   ├─fsmonitor-watchman.sample
+|  |   ├─post-update.sample
+|  |   ├─pre-applypatch.sample
+|  |   ├─pre-commit.sample
+|  |   ├─pre-merge-commit.sample
+|  |   ├─pre-push.sample
+|  |   ├─pre-rebase.sample
+|  |   ├─pre-receive.sample
+|  |   ├─prepare-commit-msg.sample
+|  |   └update.sample

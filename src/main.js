@@ -1,12 +1,5 @@
-const weChatApiExample = require('../example/index');
 function WeChatAPI () {
-  return 'bac12311';
+  return 'bac1231ss22qwewq1';
 }
 
 export default WeChatAPI;
-
-
-
-if (process.env.NODE_ENV === 'development') {
-  weChatApiExample();
-}
