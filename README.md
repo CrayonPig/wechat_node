@@ -18,3 +18,15 @@ node-wechat
 |    └index.js
 ├─build // 打包后文件
 ```
+
+### 测试账号
+
+微信公众平台测试账号获取地址 https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
+
+
+### 计划
+-[]公众平台
+-[]小程序
+-[]微信支付
+-[]开放平台
+-[]企业微信

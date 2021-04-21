@@ -3,6 +3,7 @@ import json from 'rollup-plugin-json';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 import commonjs from 'rollup-plugin-commonjs';
+import babel from 'rollup-plugin-babel';
 const { eslint } = require('rollup-plugin-eslint');
 
 const resolveFile = function (filePath) {
@@ -17,6 +18,9 @@ export default {
     format: 'cjs',
     exports: 'auto'
   },
+  watch: {
+    exclude: 'node_modules/**'
+  },
   plugins: [
     json(),
     commonjs(),
@@ -24,6 +28,9 @@ export default {
       include: ['src/**'],
       exclude: ['node_modules/**']
     }),
+    babel({
+      exclude: 'node_modules/**'
+    })
     // 本地服务器
     // serve({
     //   open: true, // 自动打开页面

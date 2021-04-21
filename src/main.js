@@ -1,5 +1,8 @@
-function WeChatAPI () {
-  return 'bac1231ss22qwewq1';
-}
+
+import offiaccount from './offiaccount';
+
+const WeChatAPI = {
+  offiaccount
+};
 
 export default WeChatAPI;
