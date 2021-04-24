@@ -1,53 +1,52 @@
-import Route, {
-  post,
-  put,
-  del,
-  get,
-  controller,
-  convert,
-  required
-} from 'koa-decorator-router';
-import Koa from 'koa'
-import Router from 'koa-router'
-import bodyParser from 'koa-bodyparser'
-import { PORT } from './config'
+// import Route, {
+//   post,
+//   put,
+//   del,
+//   get,
+//   controller,
+//   convert,
+//   required
+// } from 'koa-decorator-router';
+import Koa from 'koa';
+import Router from 'koa-router';
+import bodyParser from 'koa-bodyparser';
+import { PORT } from './config';
 const log = require('../src/utils/log');
 const getIPAddress = require('../src/utils/myIp');
-const easyWechat =  require ('../build/bundle');
+// const easyWechat =  require ('../build/bundle');
 
+function addCountry (target) {
+  target.country = 'Chinese';
+}
 
 const app = new Koa();
 const router = new Router();
-const route = new Route()
+// const route = new Route();
 
-const  { offiaccount } = easyWechat;
+// const  { offiaccount } = easyWechat;
 const myIp = getIPAddress(); // 获取本机ip
-const weChatOffiaccount = new offiaccount({
-  appid: config.APP_ID,
-  appsecret: config.APP_SECRET
-});
+// const weChatOffiaccount = new offiaccount({
+//   appid: config.APP_ID,
+//   appsecret: config.APP_SECRET
+// });
 
 
-app.use(bodyParser())
+app.use(bodyParser());
 
-const middleware1 = convert(async (ctx, next) => {
-  console.log("middleware1")
-  await next()
-})
-
-@controller('/article')
+// @controller('/article')
+@addCountry
 class Article {
 
-  @get('/init')
-  addArticle(ctx) {
-    let token =  '';
-    weChatOffiaccount.initAccessToken((data) => {
-      token = data
-      log.info(data);
-    });
+  // @get('/init')
+  addArticle (ctx) {
+    let token =  '123';
+    // weChatOffiaccount.initAccessToken((data) => {
+    //   token = data
+    //   log.info(data);
+    // });
     ctx.body = token;
   }
-  
+
 }
 // logger
 
@@ -67,10 +66,15 @@ app.use(async (ctx, next) => {
 });
 app.use(router.routes());
 
-route.init(router)
+router.get('/init', async (ctx, next) => {
+  // const token = await weChatOffiaccount.initAccessToken();
+  // log.info(token);
+  ctx.body = Article.country;
+});
+// route.init(router);
 app
   .use(router.routes())
-  .use(router.allowedMethods())
+  .use(router.allowedMethods());
 
 app.listen(PORT);
 

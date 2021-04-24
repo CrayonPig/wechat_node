@@ -1,7 +1,14 @@
 {
-  "experimentalDecorators": true, // 主要是这个
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "compilerOptions":
+  {
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths":
+    {
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules"]
 }

@@ -24,11 +24,12 @@ export default {
   plugins: [
     json(),
     commonjs(),
-    eslint({
-      include: ['src/**'],
-      exclude: ['node_modules/**']
-    }),
+    // eslint({
+    //   include: ['src/**'],
+    //   exclude: ['node_modules/**']
+    // }),
     babel({
+      extensions: ['.js'],
       exclude: 'node_modules/**'
     })
     // 本地服务器
