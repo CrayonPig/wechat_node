@@ -1,12 +1,3 @@
-// import Route, {
-//   post,
-//   put,
-//   del,
-//   get,
-//   controller,
-//   convert,
-//   required
-// } from 'koa-decorator-router';
 import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
@@ -21,7 +12,6 @@ function addCountry (target) {
 
 const app = new Koa();
 const router = new Router();
-// const route = new Route();
 
 // const  { offiaccount } = easyWechat;
 const myIp = getIPAddress(); // 获取本机ip
@@ -71,7 +61,7 @@ router.get('/init', async (ctx, next) => {
   // log.info(token);
   ctx.body = Article.country;
 });
-// route.init(router);
+
 app
   .use(router.routes())
   .use(router.allowedMethods());
